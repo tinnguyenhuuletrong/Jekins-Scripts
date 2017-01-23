@@ -1,6 +1,6 @@
 
 # create jekin config
-echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+sudo echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
 <plist version=\"1.0\">
   <dict>
@@ -21,3 +21,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <string>jenkins</string>
   </dict>
 </plist>" > /Library/LaunchDaemons/homebrew.mxcl.jenkins.plist
+
+
+# Register as services
+sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.jenkins.plist
