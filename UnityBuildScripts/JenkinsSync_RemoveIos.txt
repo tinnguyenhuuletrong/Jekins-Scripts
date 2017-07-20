@@ -1,0 +1,11 @@
+rm -rf _build/ios/
+rm -rf Assets/Plugins/iOS/_native
+rm -rf _Plugin/IosLib
+
+mkdir -p _build/ios/
+mkdir -p _Plugin/IosLib
+
+export SOURCE="/Users/Shared/LoopSDK/BadassCrew/iOS/_native/"
+export DES="_Plugin/IosLib"
+
+rsync -av $SOURCE $DES --progress
